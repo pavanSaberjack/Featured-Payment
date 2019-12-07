@@ -15,6 +15,10 @@
 		8BDB7A01239B87100037264E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BDB79FF239B87100037264E /* LaunchScreen.storyboard */; };
 		8BDB7A04239B87100037264E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDB7A03239B87100037264E /* main.m */; };
 		8BFEDA70239B8DC1000C7FD0 /* ChatVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEDA6F239B8DC1000C7FD0 /* ChatVC.m */; };
+		8BFEDA77239BD1AA000C7FD0 /* TaxiServiceVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEDA75239BD1AA000C7FD0 /* TaxiServiceVC.m */; };
+		8BFEDA78239BD1AA000C7FD0 /* TaxiServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEDA76239BD1AA000C7FD0 /* TaxiServiceVC.xib */; };
+		8BFEDA7C239BD3B1000C7FD0 /* GroceriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEDA7A239BD3B1000C7FD0 /* GroceriesVC.m */; };
+		8BFEDA7D239BD3B1000C7FD0 /* GroceriesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEDA7B239BD3B1000C7FD0 /* GroceriesVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +37,12 @@
 		8BDB7A03239B87100037264E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BFEDA6E239B8DC1000C7FD0 /* ChatVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatVC.h; sourceTree = "<group>"; };
 		8BFEDA6F239B8DC1000C7FD0 /* ChatVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatVC.m; sourceTree = "<group>"; };
+		8BFEDA74239BD1AA000C7FD0 /* TaxiServiceVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaxiServiceVC.h; sourceTree = "<group>"; };
+		8BFEDA75239BD1AA000C7FD0 /* TaxiServiceVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaxiServiceVC.m; sourceTree = "<group>"; };
+		8BFEDA76239BD1AA000C7FD0 /* TaxiServiceVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaxiServiceVC.xib; sourceTree = "<group>"; };
+		8BFEDA79239BD3B1000C7FD0 /* GroceriesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceriesVC.h; sourceTree = "<group>"; };
+		8BFEDA7A239BD3B1000C7FD0 /* GroceriesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceriesVC.m; sourceTree = "<group>"; };
+		8BFEDA7B239BD3B1000C7FD0 /* GroceriesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceriesVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +95,7 @@
 		8BDB79F3239B870E0037264E /* Grab-payments */ = {
 			isa = PBXGroup;
 			children = (
+				8BFEDA71239BD16D000C7FD0 /* Services */,
 				8BFEDA6D239B8DB1000C7FD0 /* Chat */,
 				8BDB79F4239B870E0037264E /* AppDelegate.h */,
 				8BDB79F5239B870E0037264E /* AppDelegate.m */,
@@ -106,6 +117,35 @@
 				8BFEDA6F239B8DC1000C7FD0 /* ChatVC.m */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		8BFEDA71239BD16D000C7FD0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8BFEDA73239BD180000C7FD0 /* Groceries */,
+				8BFEDA72239BD179000C7FD0 /* Taxi */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8BFEDA72239BD179000C7FD0 /* Taxi */ = {
+			isa = PBXGroup;
+			children = (
+				8BFEDA74239BD1AA000C7FD0 /* TaxiServiceVC.h */,
+				8BFEDA75239BD1AA000C7FD0 /* TaxiServiceVC.m */,
+				8BFEDA76239BD1AA000C7FD0 /* TaxiServiceVC.xib */,
+			);
+			path = Taxi;
+			sourceTree = "<group>";
+		};
+		8BFEDA73239BD180000C7FD0 /* Groceries */ = {
+			isa = PBXGroup;
+			children = (
+				8BFEDA79239BD3B1000C7FD0 /* GroceriesVC.h */,
+				8BFEDA7A239BD3B1000C7FD0 /* GroceriesVC.m */,
+				8BFEDA7B239BD3B1000C7FD0 /* GroceriesVC.xib */,
+			);
+			path = Groceries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +210,8 @@
 			files = (
 				8BDB7A01239B87100037264E /* LaunchScreen.storyboard in Resources */,
 				8BDB79FE239B87100037264E /* Assets.xcassets in Resources */,
+				8BFEDA78239BD1AA000C7FD0 /* TaxiServiceVC.xib in Resources */,
+				8BFEDA7D239BD3B1000C7FD0 /* GroceriesVC.xib in Resources */,
 				8BDB79FC239B870E0037264E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +275,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BFEDA70239B8DC1000C7FD0 /* ChatVC.m in Sources */,
+				8BFEDA77239BD1AA000C7FD0 /* TaxiServiceVC.m in Sources */,
+				8BFEDA7C239BD3B1000C7FD0 /* GroceriesVC.m in Sources */,
 				8BDB79F9239B870E0037264E /* ViewController.m in Sources */,
 				8BDB7A04239B87100037264E /* main.m in Sources */,
 				8BDB79F6239B870E0037264E /* AppDelegate.m in Sources */,

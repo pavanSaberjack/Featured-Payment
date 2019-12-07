@@ -1,5 +1,5 @@
 //
-//  ChatVC.h
+//  TaxiServiceVC.h
 //  Grab-payments
 //
 //  Created by Pavan on 07/12/19.
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ChatVC : UIViewController
+@interface TaxiServiceVC : UIViewController
 
 @end
 

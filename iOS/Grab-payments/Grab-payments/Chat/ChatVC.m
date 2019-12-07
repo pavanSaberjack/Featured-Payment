@@ -9,19 +9,19 @@
 #import "ChatVC.h"
 
 @implementation ChatVC
-// Overrides these three methods below to provide basic classes.
-+ (Class)cellLayoutClassForItemType:(NSString *)type
-{
-    // ...
-}
-
-+ (Class)inputPanelClass
-{
-    // ...
-}
-
-- (void)registerChatItemCells
-{
-    // ...
-}
+//// Overrides these three methods below to provide basic classes.
+//+ (Class)cellLayoutClassForItemType:(NSString *)type
+//{
+//    // ...
+//}
+//
+//+ (Class)inputPanelClass
+//{
+//    // ...
+//}
+//
+//- (void)registerChatItemCells
+//{
+//    // ...
+//}
 @end
