@@ -26,13 +26,10 @@ router.get('/', (req, res, next) => {
 //Request for OTP Initation//
 router.get('/confirm', (req, res) => {
 
-  
-  
   axios.get(API_OTP)
   .then(response => {
     console.log(response.data.url);
     console.log(response.data.explanation);
-    // res.sendFile(path.join(__dirname+'/public/confirmationPage.html'));
     res.sendFile((`${__dirname}/public/confirmationPage.html`));
   })
   .catch(error => {
@@ -42,13 +39,13 @@ router.get('/confirm', (req, res) => {
 });
 
 
-router.post('/otpClicked', (req, res) => {
+router.post('/success', (req, res) => {
   
   axios.get(API_CON)
   .then(response => {
     console.log(response.data.url);
     console.log(response.data.explanation);
-    res.redirect(targetBaseUrl + `success.html`);
+    res.sendFile((`${__dirname}/public/success.html`));
   })
   .catch(error => {
     console.log(error);
@@ -57,6 +54,6 @@ router.post('/otpClicked', (req, res) => {
 });
 
 
-router.post('/ntClicked', (req, res) => {
-  res.redirect(targetBaseUrl + `index.html`);
+router.post('/home', (req, res) => {
+  res.sendFile((`${__dirname}/public/index.html`));
 });
