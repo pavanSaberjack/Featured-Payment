@@ -3,3 +3,21 @@
     font-family: Helvetica, sans-serif;
     font-size: 30px;
 }
+
+.center {
+    margin: auto;
+    width: 60%;
+    text-align: center;
+    border: 3px solid #73AD21;
+    padding: 200px 0;
+  }
+
+  .inp{
+    border: 1px solid lightgrey;
+    height: 30px;
+    width: 200px;
+  }
+
+  .bt{
+      
+  }
