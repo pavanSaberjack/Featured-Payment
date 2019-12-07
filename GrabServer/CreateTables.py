@@ -33,6 +33,7 @@ def create_tables():
     conn.execute('CREATE TABLE confirm_payment (s_no INTEGER PRIMARY KEY,\
                                                 seller_id INTEGER, \
                                                 user_phone INTEGER, \
+                                                transaction_id TEXT, \
                                                 otp TEXT)')
 
     print("Table created successfully")

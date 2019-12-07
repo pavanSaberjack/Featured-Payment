@@ -134,8 +134,10 @@ class Server:
 
             otp = '{:06d}'.format(random.randint(1, 999999))
             otp = '333333'     # DELETE
-            cursorObj.execute('INSERT INTO confirm_payment (seller_id, user_phone, otp) '
-                              'VALUES ({}, {}, "{}")'.format(transaction['seller_id'], user_phone, otp))
+            cursorObj.execute('INSERT INTO confirm_payment (seller_id, transaction_id, user_phone, otp) '
+                              'VALUES ({}, "{}", {}, "{}")'.format(transaction['seller_id'],
+                                                                   transaction['transaction_id'],
+                                                                   user_phone, otp))
             conn.commit()
 
         sms = 'You have successfully performed transaction. Say the number {} to the seller'.format(otp)
@@ -143,4 +145,19 @@ class Server:
 
         return {'status': SUCCESS, 'message': 'Ok'}
 
+    def merchant_confirm_transaction(self, otp, user_phone, seller_id):
+        with sqlite3.connect(SERVER_DB) as conn:
+            conn.row_factory = sqlite3.Row
+            cursorObj = conn.cursor()
 
+            cursorObj.execute('SELECT * FROM confirm_payment WHERE seller_id == {} AND '
+                              'user_phone == {} AND otp == "{}"'.format(seller_id, user_phone, otp))
+            rows = cursorObj.fetchall()
+            if len(rows) == 0:
+                return {'status': FAILURE, 'message': 'No transaction has happened'}
+            rows = max(rows, key=lambda x: x['s_no'])
+
+            cursorObj.execute('DELETE FROM confirm_payment WHERE s_no == {}'.format(rows['s_no']))
+            conn.commit()
+
+        return {'status': SUCCESS, 'message': 'Ok'}
