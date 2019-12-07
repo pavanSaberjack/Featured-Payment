@@ -2,7 +2,7 @@ import sqlite3
 
 import Secret
 
-SERVER_DB = 'server_database.db'
+SERVER_DB = 'bank_database.db'
 
 def create_tables():
     conn = sqlite3.connect(SERVER_DB)
@@ -11,7 +11,8 @@ def create_tables():
     conn.execute('CREATE TABLE users (user_id INTEGER PRIMARY KEY,\
                                       user_name TEXT, \
                                       user_phone INTEGER, \
-                                      user_upi TEXT)')
+                                      user_upi TEXT, \
+                                      balance REAL)')
 
     conn.execute('CREATE TABLE sellers (seller_id INTEGER PRIMARY KEY,\
                                         seller_name TEXT, \
@@ -25,13 +26,8 @@ def create_tables():
                                              user_id INTEGER, \
                                              state INTEGER)')
 
-    conn.execute('CREATE TABLE confirm_seller (s_no INTEGER PRIMARY KEY,\
-                                               transaction_id TEXT, \
-                                               user_phone INTEGER, \
-                                               otp TEXT)')
-
     conn.execute('CREATE TABLE confirm_payment (s_no INTEGER PRIMARY KEY,\
-                                                seller_id INTEGER, \
+                                                transaction_id TEXT, \
                                                 user_phone INTEGER, \
                                                 otp TEXT)')
 
@@ -41,10 +37,10 @@ def create_tables():
 def add_users():
     conn = sqlite3.connect(SERVER_DB)
     cursorObj = conn.cursor()
-    cursorObj.execute('INSERT INTO users (user_name, user_phone, user_upi) \
-                  VALUES ("Prasad", {}, "prasad.ok@sbi")'.format(Secret.PRASAD_NUMBER))
-    cursorObj.execute('INSERT INTO users (user_name, user_phone, user_upi) \
-                  VALUES ("Ram", {}, "ram@hdfc")'.format(Secret.RAM_NUMBER))
+    cursorObj.execute('INSERT INTO users (user_name, user_phone, user_upi, balance) \
+                  VALUES ("Prasad", {}, "prasad.ok@sbi", 1000000)'.format(Secret.PRASAD_NUMBER))
+    cursorObj.execute('INSERT INTO users (user_name, user_phone, user_upi, balance) \
+                  VALUES ("Ram", {}, "ram@hdfc", 1000)'.format(Secret.RAM_NUMBER))
     print('Added users successfully')
     conn.commit()
     conn.close()
