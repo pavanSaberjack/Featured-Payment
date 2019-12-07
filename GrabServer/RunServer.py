@@ -12,5 +12,12 @@ def initate_payment():
     message = server.merchant_initiate_payment(money, seller_id, user_phone)
     return message
 
+@app.route('/confirm_seller', methods=['POST'])
+def confirm_seller():
+    otp = request.form['otp']
+    user_phone = int(request.form['user_phone'])
+    message = server.confirm_merchant_otp(otp, user_phone)
+    return message
+
 if __name__ == '__main__':
    app.run(debug=True)

@@ -59,12 +59,13 @@ class Server:
         values_str = '"{}", {}, {}, {}, {}, {}'.format(transaction_id, txn_date, money,
                                                      seller['seller_id'], user['user_id'], state)
         otp = ':06d'.format(random.randint(0, 999999))
+        otp = '111111'  # DELETE
         with sqlite3.connect(SERVER_DB) as conn:
             cursorObj = conn.cursor()
             cursorObj.execute('INSERT INTO transactions (transaction_id, txn_date, money, seller_id, user_id, \
                                 state) VALUES ({})'.format(values_str))
-            cursorObj.execute('INSERT INTO confirm_seller (transaction_id, otp) VALUES ("{}", \
-                                "{}")'.format(transaction_id, otp))
+            cursorObj.execute('INSERT INTO confirm_seller (transaction_id, user_phone, otp) VALUES ("{}", \
+                                {}, "{}")'.format(transaction_id, user_phone, otp))
             conn.commit()
 
 
@@ -73,3 +74,33 @@ class Server:
         SendSMS.service(message_to_user, user_phone)
 
         return {'status': SUCCESS, 'message': 'ok'}
+
+    def confirm_merchant_otp(self, otp, user_phone):
+        with sqlite3.connect(SERVER_DB) as conn:
+            conn.row_factory = sqlite3.Row
+            cursorObj = conn.cursor()
+            cursorObj.execute('SELECT * from confirm_seller where user_phone == {}'.format(user_phone))
+            user_data = cursorObj.fetchall()
+
+            if len(user_data) == 0:
+                return {'status': FAILURE, 'message': 'No seller has requested payment'}
+            transaction_data = max(user_data, key=lambda x:x['transaction_id'])
+            if transaction_data['otp'] != otp:
+                return {'status': FAILURE, 'message': 'OTP has failed'}
+
+            transaction_id = transaction_data['transaction_id']
+            cursorObj.execute('DELETE FROM confirm_seller WHERE transaction_id == "{}"'.format(transaction_id))
+            conn.commit()
+
+            cursorObj.execute('SELECT * FROM transactions WHERE transaction_id == "{}"'.format(transaction_id))
+            rows = cursorObj.fetchall()
+            if len(rows) != 1:
+                return {'status': FAILURE, 'message': 'Transaction is missing'}
+
+            # TODO: Call Bank here
+
+        return {'status': SUCCESS, 'message': 'OK'}
+
+
+
+

@@ -27,6 +27,7 @@ def create_tables():
 
     conn.execute('CREATE TABLE confirm_seller (s_no INTEGER PRIMARY KEY,\
                                                transaction_id TEXT, \
+                                               user_phone INTEGER, \
                                                otp TEXT)')
 
     print("Table created successfully")
