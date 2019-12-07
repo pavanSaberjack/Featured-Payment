@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		01D30B0FCB6F91C546AD7D1F2F8B3108 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		02C198ED172CB50FBEEE2F4BC69CB409 /* NoChat.h in Headers */ = {isa = PBXBuildFile; fileRef = ADA615B043A2ADF0A53F36ABCE642C78 /* NoChat.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0DB17A6DFD7D0C0B5A46DB975E990DD9 /* NOCChatCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E607903AB12C593701F60F028E0C3889 /* NOCChatCollectionView.m */; };
+		11F23CF4ABA1CA18F0CEDEC886E38E2C /* NOCChatContainerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5E8C3D4C8B033936CB62FCE7656A8A42 /* NOCChatContainerView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2139BBE1C7F133B6DC87D1320964E152 /* Pods-Grab-payments-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FACA5DDB838ABA54B691C86D3685D66D /* Pods-Grab-payments-dummy.m */; };
+		2CBFCF5F2CCDAED210CE86B6A3C46A9E /* NOCChatItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE35596A3B95EBCCFE492F56A8777D11 /* NOCChatItemCell.m */; };
+		2FA054702E5BFE3C0A8F09A58171A297 /* NOCChatCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EB8615F766B5DEED50163E1494412659 /* NOCChatCollectionViewLayout.m */; };
+		318F1EED6B89DA4756A54C2FA3C7A8DD /* NOCChatContainerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AC0F6EA210A7463ABA19642DB8D75F /* NOCChatContainerView.m */; };
+		38E0BCB5297CDDACFD1833151EC1227D /* NOCChatItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C188949C0B6676E95F86A94A963BD8C /* NOCChatItem.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4EECB8E7B25092A5FD9EBE3C5162AF65 /* NOCChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1E47F52F05853DC962846ADE05351A /* NOCChatViewController.m */; };
+		544658149D4D9E8FFC91C2DF12B5ACD2 /* NOCChatItemCellLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = FC1CE6673164FCFD0CC3A47857C2D97F /* NOCChatItemCellLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		65BB512434CA7C253D0141EC8CACD75B /* NOCChatInputPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 17F60029C26B5FD6F0563DB79E47364A /* NOCChatInputPanel.m */; };
+		8A74DCB250C6FE0DF900906D31C50A36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		8C82EF8582B3DDD025C0B696D259CE3E /* NOCChatCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 57128B6046EAD7057E4A21E32EB840C5 /* NOCChatCollectionView.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9076253FAADFD800C4BE50515F93AA6A /* NOCChatInputPanel.h in Headers */ = {isa = PBXBuildFile; fileRef = 17C2973F5ADD4B4390A5E56EE8036F49 /* NOCChatInputPanel.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9734839E22B62D66FE5EA6E80CDD4EFF /* NOCChatViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B77075C4E2798EED5FE45AC2BA76ADBA /* NOCChatViewController.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A736ACFA8A74826AB77F4283A277125E /* NoChat-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D311F177D26E417436F44082E675920 /* NoChat-dummy.m */; };
+		C5C48BA83DC4F446003DAA04403EF4EF /* NOCChatItemCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 00A9173E592DE9F0218839FF6D78D2C4 /* NOCChatItemCell.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		CC8FA8CBFDA6B269EDCAA07A440D89D0 /* NOCChatCollectionViewLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FEB4D57EACFAA18131E325A824709C /* NOCChatCollectionViewLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16F5A718A2E7883FB5E10360CC3D6B09 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6E9904EB4934AA8681034ADF626DA95;
+			remoteInfo = NoChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00A9173E592DE9F0218839FF6D78D2C4 /* NOCChatItemCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOCChatItemCell.h; path = NoChat/NoChat/NOCChatItemCell.h; sourceTree = "<group>"; };
+		0F634984475EAE157B5AC31F1013FA59 /* Pods-Grab-payments-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Grab-payments-acknowledgements.plist"; sourceTree = "<group>"; };
+		17C2973F5ADD4B4390A5E56EE8036F49 /* NOCChatInputPanel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOCChatInputPanel.h; path = NoChat/NoChat/NOCChatInputPanel.h; sourceTree = "<group>"; };
+		17F60029C26B5FD6F0563DB79E47364A /* NOCChatInputPanel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NOCChatInputPanel.m; path = NoChat/NoChat/NOCChatInputPanel.m; sourceTree = "<group>"; };
+		1B34A3F930E9B487EE01BC2AA83AAB0C /* Pods-Grab-payments.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grab-payments.debug.xcconfig"; sourceTree = "<group>"; };
+		2DDC2A9C881C0C0EF7B14D7F29BF6DDE /* libPods-Grab-payments.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Grab-payments.a"; path = "libPods-Grab-payments.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		32995C115A912227F10641AD2DD40F71 /* libNoChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libNoChat.a; path = libNoChat.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		40AC0F6EA210A7463ABA19642DB8D75F /* NOCChatContainerView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NOCChatContainerView.m; path = NoChat/NoChat/NOCChatContainerView.m; sourceTree = "<group>"; };
+		57128B6046EAD7057E4A21E32EB840C5 /* NOCChatCollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOCChatCollectionView.h; path = NoChat/NoChat/NOCChatCollectionView.h; sourceTree = "<group>"; };
+		5CF6789DD1543D10DADF89691289165B /* Pods-Grab-payments-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Grab-payments-resources.sh"; sourceTree = "<group>"; };
+		5E8C3D4C8B033936CB62FCE7656A8A42 /* NOCChatContainerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOCChatContainerView.h; path = NoChat/NoChat/NOCChatContainerView.h; sourceTree = "<group>"; };
+		6039B572596C2ADBF181E7D70FAEFB4C /* NoChat-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NoChat-prefix.pch"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		6C188949C0B6676E95F86A94A963BD8C /* NOCChatItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOCChatItem.h; path = NoChat/NoChat/NOCChatItem.h; sourceTree = "<group>"; };
+		7BE5ADDB0C4AACCFE2D6610FC3A73387 /* NoChat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NoChat.xcconfig; sourceTree = "<group>"; };
+		7E61EC2E79CE59805DFD13D9E4DA387A /* Pods-Grab-payments-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Grab-payments-frameworks.sh"; sourceTree = "<group>"; };
+		8D311F177D26E417436F44082E675920 /* NoChat-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NoChat-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97FEB4D57EACFAA18131E325A824709C /* NOCChatCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOCChatCollectionViewLayout.h; path = NoChat/NoChat/NOCChatCollectionViewLayout.h; sourceTree = "<group>"; };
+		ADA615B043A2ADF0A53F36ABCE642C78 /* NoChat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NoChat.h; path = NoChat/NoChat/NoChat.h; sourceTree = "<group>"; };
+		B77075C4E2798EED5FE45AC2BA76ADBA /* NOCChatViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOCChatViewController.h; path = NoChat/NoChat/NOCChatViewController.h; sourceTree = "<group>"; };
+		CA10D44313777E28CAD3E35B9521CCB1 /* Pods-Grab-payments-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Grab-payments-acknowledgements.markdown"; sourceTree = "<group>"; };
+		CE1E47F52F05853DC962846ADE05351A /* NOCChatViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NOCChatViewController.m; path = NoChat/NoChat/NOCChatViewController.m; sourceTree = "<group>"; };
+		CE35596A3B95EBCCFE492F56A8777D11 /* NOCChatItemCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NOCChatItemCell.m; path = NoChat/NoChat/NOCChatItemCell.m; sourceTree = "<group>"; };
+		D71DF03E040572754C519E0B3F05850A /* Pods-Grab-payments.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Grab-payments.release.xcconfig"; sourceTree = "<group>"; };
+		E607903AB12C593701F60F028E0C3889 /* NOCChatCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NOCChatCollectionView.m; path = NoChat/NoChat/NOCChatCollectionView.m; sourceTree = "<group>"; };
+		EB8615F766B5DEED50163E1494412659 /* NOCChatCollectionViewLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NOCChatCollectionViewLayout.m; path = NoChat/NoChat/NOCChatCollectionViewLayout.m; sourceTree = "<group>"; };
+		FACA5DDB838ABA54B691C86D3685D66D /* Pods-Grab-payments-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Grab-payments-dummy.m"; sourceTree = "<group>"; };
+		FC1CE6673164FCFD0CC3A47857C2D97F /* NOCChatItemCellLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NOCChatItemCellLayout.h; path = NoChat/NoChat/NOCChatItemCellLayout.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DD3131362DC9A73ABBD8B0FBE9F11103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D30B0FCB6F91C546AD7D1F2F8B3108 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8D8C4D5ABE4C910C634E7955675AADA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A74DCB250C6FE0DF900906D31C50A36 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0DCF9579055368676CB9DF1F6C64EA3F /* Pods-Grab-payments */ = {
+			isa = PBXGroup;
+			children = (
+				CA10D44313777E28CAD3E35B9521CCB1 /* Pods-Grab-payments-acknowledgements.markdown */,
+				0F634984475EAE157B5AC31F1013FA59 /* Pods-Grab-payments-acknowledgements.plist */,
+				FACA5DDB838ABA54B691C86D3685D66D /* Pods-Grab-payments-dummy.m */,
+				7E61EC2E79CE59805DFD13D9E4DA387A /* Pods-Grab-payments-frameworks.sh */,
+				5CF6789DD1543D10DADF89691289165B /* Pods-Grab-payments-resources.sh */,
+				1B34A3F930E9B487EE01BC2AA83AAB0C /* Pods-Grab-payments.debug.xcconfig */,
+				D71DF03E040572754C519E0B3F05850A /* Pods-Grab-payments.release.xcconfig */,
+			);
+			name = "Pods-Grab-payments";
+			path = "Target Support Files/Pods-Grab-payments";
+			sourceTree = "<group>";
+		};
+		2CC374C441481E11A1092BD5389192D1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				855F96EEA43EE7DCB6C5C8F01D52D1F7 /* NoChat */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				2CC374C441481E11A1092BD5389192D1 /* Pods */,
+				960693F2C385FE6A43E50ADC29705C38 /* Products */,
+				CAF5F83031477854171214685410AE63 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		855F96EEA43EE7DCB6C5C8F01D52D1F7 /* NoChat */ = {
+			isa = PBXGroup;
+			children = (
+				57128B6046EAD7057E4A21E32EB840C5 /* NOCChatCollectionView.h */,
+				E607903AB12C593701F60F028E0C3889 /* NOCChatCollectionView.m */,
+				97FEB4D57EACFAA18131E325A824709C /* NOCChatCollectionViewLayout.h */,
+				EB8615F766B5DEED50163E1494412659 /* NOCChatCollectionViewLayout.m */,
+				5E8C3D4C8B033936CB62FCE7656A8A42 /* NOCChatContainerView.h */,
+				40AC0F6EA210A7463ABA19642DB8D75F /* NOCChatContainerView.m */,
+				17C2973F5ADD4B4390A5E56EE8036F49 /* NOCChatInputPanel.h */,
+				17F60029C26B5FD6F0563DB79E47364A /* NOCChatInputPanel.m */,
+				6C188949C0B6676E95F86A94A963BD8C /* NOCChatItem.h */,
+				00A9173E592DE9F0218839FF6D78D2C4 /* NOCChatItemCell.h */,
+				CE35596A3B95EBCCFE492F56A8777D11 /* NOCChatItemCell.m */,
+				FC1CE6673164FCFD0CC3A47857C2D97F /* NOCChatItemCellLayout.h */,
+				B77075C4E2798EED5FE45AC2BA76ADBA /* NOCChatViewController.h */,
+				CE1E47F52F05853DC962846ADE05351A /* NOCChatViewController.m */,
+				ADA615B043A2ADF0A53F36ABCE642C78 /* NoChat.h */,
+				FF85E6940049F37069E7768B174E7229 /* Support Files */,
+			);
+			name = NoChat;
+			path = NoChat;
+			sourceTree = "<group>";
+		};
+		960693F2C385FE6A43E50ADC29705C38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32995C115A912227F10641AD2DD40F71 /* libNoChat.a */,
+				2DDC2A9C881C0C0EF7B14D7F29BF6DDE /* libPods-Grab-payments.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAF5F83031477854171214685410AE63 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0DCF9579055368676CB9DF1F6C64EA3F /* Pods-Grab-payments */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		FF85E6940049F37069E7768B174E7229 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7BE5ADDB0C4AACCFE2D6610FC3A73387 /* NoChat.xcconfig */,
+				8D311F177D26E417436F44082E675920 /* NoChat-dummy.m */,
+				6039B572596C2ADBF181E7D70FAEFB4C /* NoChat-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NoChat";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		11354E73003D244D6B6DC570AA3FC7F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8C82EF8582B3DDD025C0B696D259CE3E /* NOCChatCollectionView.h in Headers */,
+				CC8FA8CBFDA6B269EDCAA07A440D89D0 /* NOCChatCollectionViewLayout.h in Headers */,
+				11F23CF4ABA1CA18F0CEDEC886E38E2C /* NOCChatContainerView.h in Headers */,
+				9076253FAADFD800C4BE50515F93AA6A /* NOCChatInputPanel.h in Headers */,
+				38E0BCB5297CDDACFD1833151EC1227D /* NOCChatItem.h in Headers */,
+				C5C48BA83DC4F446003DAA04403EF4EF /* NOCChatItemCell.h in Headers */,
+				544658149D4D9E8FFC91C2DF12B5ACD2 /* NOCChatItemCellLayout.h in Headers */,
+				9734839E22B62D66FE5EA6E80CDD4EFF /* NOCChatViewController.h in Headers */,
+				02C198ED172CB50FBEEE2F4BC69CB409 /* NoChat.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		33818D5B5B23398532A289A1798F3FDC /* Pods-Grab-payments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 46B7CF2F51F0CC9AF5371013821B5A0F /* Build configuration list for PBXNativeTarget "Pods-Grab-payments" */;
+			buildPhases = (
+				E961466B0AC79A7ACD1E42564B88D817 /* Sources */,
+				DD3131362DC9A73ABBD8B0FBE9F11103 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E575752115A537AAF9C188687B808E4 /* PBXTargetDependency */,
+			);
+			name = "Pods-Grab-payments";
+			productName = "Pods-Grab-payments";
+			productReference = 2DDC2A9C881C0C0EF7B14D7F29BF6DDE /* libPods-Grab-payments.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C6E9904EB4934AA8681034ADF626DA95 /* NoChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86940229698B016A54A0D312E6B7F8DC /* Build configuration list for PBXNativeTarget "NoChat" */;
+			buildPhases = (
+				DA39DCF8806B0259E537D7113F3E3597 /* Sources */,
+				E8D8C4D5ABE4C910C634E7955675AADA /* Frameworks */,
+				11354E73003D244D6B6DC570AA3FC7F9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NoChat;
+			productName = NoChat;
+			productReference = 32995C115A912227F10641AD2DD40F71 /* libNoChat.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 960693F2C385FE6A43E50ADC29705C38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6E9904EB4934AA8681034ADF626DA95 /* NoChat */,
+				33818D5B5B23398532A289A1798F3FDC /* Pods-Grab-payments */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DA39DCF8806B0259E537D7113F3E3597 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DB17A6DFD7D0C0B5A46DB975E990DD9 /* NOCChatCollectionView.m in Sources */,
+				2FA054702E5BFE3C0A8F09A58171A297 /* NOCChatCollectionViewLayout.m in Sources */,
+				318F1EED6B89DA4756A54C2FA3C7A8DD /* NOCChatContainerView.m in Sources */,
+				65BB512434CA7C253D0141EC8CACD75B /* NOCChatInputPanel.m in Sources */,
+				2CBFCF5F2CCDAED210CE86B6A3C46A9E /* NOCChatItemCell.m in Sources */,
+				4EECB8E7B25092A5FD9EBE3C5162AF65 /* NOCChatViewController.m in Sources */,
+				A736ACFA8A74826AB77F4283A277125E /* NoChat-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E961466B0AC79A7ACD1E42564B88D817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2139BBE1C7F133B6DC87D1320964E152 /* Pods-Grab-payments-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E575752115A537AAF9C188687B808E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = NoChat;
+			target = C6E9904EB4934AA8681034ADF626DA95 /* NoChat */;
+			targetProxy = 16F5A718A2E7883FB5E10360CC3D6B09 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		24DFEB5F98ACD9640DCBE6A534E8954C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D71DF03E040572754C519E0B3F05850A /* Pods-Grab-payments.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2B6FA96FAA611A62279C49F6E01C059F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		3691EFF605EB29787F8A46C5B6BE1D9E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		5D19DA2F50DBBAEB04363F1321BBC44E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B34A3F930E9B487EE01BC2AA83AAB0C /* Pods-Grab-payments.debug.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63BA74AB8770BE268DDB4EA3FF70ADD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE5ADDB0C4AACCFE2D6610FC3A73387 /* NoChat.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/NoChat/NoChat-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		797FDB58C94D0BA5B3311786DA089985 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE5ADDB0C4AACCFE2D6610FC3A73387 /* NoChat.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/NoChat/NoChat-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B6FA96FAA611A62279C49F6E01C059F /* Debug */,
+				3691EFF605EB29787F8A46C5B6BE1D9E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		46B7CF2F51F0CC9AF5371013821B5A0F /* Build configuration list for PBXNativeTarget "Pods-Grab-payments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D19DA2F50DBBAEB04363F1321BBC44E /* Debug */,
+				24DFEB5F98ACD9640DCBE6A534E8954C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86940229698B016A54A0D312E6B7F8DC /* Build configuration list for PBXNativeTarget "NoChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63BA74AB8770BE268DDB4EA3FF70ADD7 /* Debug */,
+				797FDB58C94D0BA5B3311786DA089985 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

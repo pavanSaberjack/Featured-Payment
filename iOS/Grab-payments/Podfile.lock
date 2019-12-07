@@ -1,0 +1,12 @@
+PODS:
+  - NoChat (0.3.2)
+
+DEPENDENCIES:
+  - NoChat (~> 0.3)
+
+SPEC CHECKSUMS:
+  NoChat: aaa980b8b29c0db8c8bd8ecde22e718cc8ad1bf7
+
+PODFILE CHECKSUM: 587dd5ca9393df652bd6c8047a0ae84b158312d4
+
+COCOAPODS: 1.4.0
