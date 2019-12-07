@@ -13,11 +13,13 @@
   }
 
   .inp{
-    border: 1px solid lightgrey;
     height: 30px;
-    width: 200px;
+    width: 240px;
   }
 
   .bt{
-      
+    height: 30px;
+    width: 250px;
+    font-display: Helvetica, sans-serif;
+    font-size: 20px;
   }

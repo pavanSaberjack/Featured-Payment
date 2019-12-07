@@ -1,10 +1,9 @@
-console.log('Client-side code running');
 
-const button = document.getElementById('myButton');
+const button1 = document.getElementById('otpButton');
 button.addEventListener('click', function(e) {
   console.log('button was clicked');
 
-  fetch('/confirm', {method: 'POST'})
+  fetch('/otpClicked', {method: 'POST'})
     .then(function(response) {
       if(response.ok) {
         console.log('Click was recorded');
@@ -16,6 +15,3 @@ button.addEventListener('click', function(e) {
       console.log(error);
     });
 });
-
-
-
