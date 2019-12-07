@@ -12,9 +12,9 @@
         <form action="confirm" methog="post" id="confirm">
             <label class="lc1">Welcome to GRAB MERCHANT PORTAL</label>
             <br/><br/>
-            <input class="inp" id="mobile" name="mobile" placeholder="Please enter customer mobile number." required />
+            <input class="inp" id="mobile" name="mobile" onkeypress="return isNumber(event)" placeholder="Please enter customer mobile number."  required />
             <br/><br/>
-            <input class="inp" id="amount" name="amount" placeholder="Please enter amount." required />
+            <input class="inp" id="amount" name="amount" onkeypress="return isNumber(event)" placeholder="Please enter amount." required />
             <br/><br/>
             <button id="myButton" class="bt">Proceed</button>
         </form>
