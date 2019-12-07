@@ -19,6 +19,8 @@
 		8BFEDA78239BD1AA000C7FD0 /* TaxiServiceVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEDA76239BD1AA000C7FD0 /* TaxiServiceVC.xib */; };
 		8BFEDA7C239BD3B1000C7FD0 /* GroceriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEDA7A239BD3B1000C7FD0 /* GroceriesVC.m */; };
 		8BFEDA7D239BD3B1000C7FD0 /* GroceriesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEDA7B239BD3B1000C7FD0 /* GroceriesVC.xib */; };
+		8BFEDA82239BDFF1000C7FD0 /* PaymentVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BFEDA80239BDFF1000C7FD0 /* PaymentVC.m */; };
+		8BFEDA83239BDFF1000C7FD0 /* PaymentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8BFEDA81239BDFF1000C7FD0 /* PaymentVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		8BFEDA79239BD3B1000C7FD0 /* GroceriesVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GroceriesVC.h; sourceTree = "<group>"; };
 		8BFEDA7A239BD3B1000C7FD0 /* GroceriesVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GroceriesVC.m; sourceTree = "<group>"; };
 		8BFEDA7B239BD3B1000C7FD0 /* GroceriesVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GroceriesVC.xib; sourceTree = "<group>"; };
+		8BFEDA7F239BDFF1000C7FD0 /* PaymentVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentVC.h; sourceTree = "<group>"; };
+		8BFEDA80239BDFF1000C7FD0 /* PaymentVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentVC.m; sourceTree = "<group>"; };
+		8BFEDA81239BDFF1000C7FD0 /* PaymentVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +127,7 @@
 		8BFEDA71239BD16D000C7FD0 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				8BFEDA7E239BDFDC000C7FD0 /* Payment */,
 				8BFEDA73239BD180000C7FD0 /* Groceries */,
 				8BFEDA72239BD179000C7FD0 /* Taxi */,
 			);
@@ -146,6 +152,16 @@
 				8BFEDA7B239BD3B1000C7FD0 /* GroceriesVC.xib */,
 			);
 			path = Groceries;
+			sourceTree = "<group>";
+		};
+		8BFEDA7E239BDFDC000C7FD0 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				8BFEDA7F239BDFF1000C7FD0 /* PaymentVC.h */,
+				8BFEDA80239BDFF1000C7FD0 /* PaymentVC.m */,
+				8BFEDA81239BDFF1000C7FD0 /* PaymentVC.xib */,
+			);
+			path = Payment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BDB7A01239B87100037264E /* LaunchScreen.storyboard in Resources */,
+				8BFEDA83239BDFF1000C7FD0 /* PaymentVC.xib in Resources */,
 				8BDB79FE239B87100037264E /* Assets.xcassets in Resources */,
 				8BFEDA78239BD1AA000C7FD0 /* TaxiServiceVC.xib in Resources */,
 				8BFEDA7D239BD3B1000C7FD0 /* GroceriesVC.xib in Resources */,
@@ -278,6 +295,7 @@
 				8BFEDA77239BD1AA000C7FD0 /* TaxiServiceVC.m in Sources */,
 				8BFEDA7C239BD3B1000C7FD0 /* GroceriesVC.m in Sources */,
 				8BDB79F9239B870E0037264E /* ViewController.m in Sources */,
+				8BFEDA82239BDFF1000C7FD0 /* PaymentVC.m in Sources */,
 				8BDB7A04239B87100037264E /* main.m in Sources */,
 				8BDB79F6239B870E0037264E /* AppDelegate.m in Sources */,
 			);

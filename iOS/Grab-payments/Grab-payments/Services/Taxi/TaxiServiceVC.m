@@ -7,6 +7,7 @@
 //
 
 #import "TaxiServiceVC.h"
+#import "PaymentVC.h"
 
 typedef NS_ENUM(NSInteger, RideStatus) {
     None = 0,
@@ -38,6 +39,12 @@ typedef NS_ENUM(NSInteger, RideStatus) {
 }
 
 - (IBAction)buttonPressed:(id)sender {
+    
+    if (self.rideStatus == Finished) {
+        PaymentVC *paymentVC = [[PaymentVC alloc] initWithNibName:@"PaymentVC" bundle:nil];
+        [self.navigationController pushViewController:paymentVC animated:YES];
+    }
+    
     [self updateRideStatus];
     [self updateButtonTitle];
 }
