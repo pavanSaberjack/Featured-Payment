@@ -6,6 +6,7 @@ server = Server()
 
 @app.route('/initiate_payment', methods=['POST'])
 def initate_payment():
+    print(request.form)
     money = float(request.form['money'])
     seller_id = int(request.form['seller_id'])
     user_phone = int(request.form['user_phone'])
@@ -36,4 +37,5 @@ def merchant_confirm_transaction():
 
 
 if __name__ == '__main__':
-   app.run(debug=True, port=3679)
+    # app.run(host='0.0.0.0', port=3679)
+    app.run(host='0.0.0.0', port=8080, debug=True)

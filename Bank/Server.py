@@ -58,7 +58,7 @@ class Server:
         values_str = '"{}", {}, {}, {}, {}, {}'.format(transaction_id, txn_date, money,
                                                        seller['seller_id'], user['user_id'], state)
         otp = ':06d'.format(random.randint(0, 999999))
-        otp = '222222'  # DELETE
+        # otp = '222222'  # DELETE
         user_phone = user['user_phone']
         with sqlite3.connect(SERVER_DB) as conn:
             cursorObj = conn.cursor()
@@ -71,6 +71,7 @@ class Server:
         message_to_user = '{} is requesting {} Rs. SMS {} to {} to confirm your request'.format(
             seller['seller_name'], money, otp, Secret.BANK_CONFIRM_NUMBER)
         SendSMS.service(message_to_user, user_phone)
+        print('SMS::::::::::::::::::', message_to_user)
 
         return {'status': SUCCESS, 'message': 'ok'}
 
