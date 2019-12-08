@@ -19,5 +19,21 @@ def confirm_seller():
     message = server.confirm_merchant_otp(otp, user_phone)
     return message
 
+@app.route('/confirm_bank_otp', methods=['POST'])
+def confirm_bank_otp():
+    otp = request.form['otp']
+    user_phone = int(request.form['user_phone'])
+    message = server.confirm_bank_otp(otp, user_phone)
+    return message
+
+@app.route('/merchant_confirm_transaction', methods=['POST'])
+def merchant_confirm_transaction():
+    otp = request.form['otp']
+    user_phone = int(request.form['user_phone'])
+    seller_id = int(request.form['seller_id'])
+    message = server.merchant_confirm_transaction(otp, user_phone, seller_id)
+    return message
+
+
 if __name__ == '__main__':
-   app.run(debug=True)
+   app.run(debug=True, port=3679)
