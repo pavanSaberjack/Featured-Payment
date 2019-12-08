@@ -59,11 +59,18 @@
                         self.otp4.text,
                         self.otp5.text,
                         self.otp6.text];
-            
-    NSURL *url = [NSURL URLWithString:@"myurll"];
+    
+    NSDictionary *params = @{ @"otp": strOTP,
+                              @"user_phone": @(1234)
+                              };
+    
+    NSURL *url = [NSURL URLWithString:@"/confirm_seller"];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
     req.HTTPMethod = @"POST";
-    req.HTTPBody = [strOTP dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSError *writeError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:&writeError];
+    req.HTTPBody = jsonData;
     
     [[[NSURLSession sharedSession] dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
