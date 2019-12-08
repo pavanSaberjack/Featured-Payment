@@ -89,9 +89,15 @@
     
     [[[NSURLSession sharedSession] dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            [self showAlert];
-        });
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self showAlertForError:error.localizedDescription];
+            });
+        } else {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self showAlert];
+            });
+        }
     }] resume];
     
 }
@@ -119,6 +125,19 @@
                                                               } else {
                                                                   [self.navigationController popToRootViewControllerAnimated:YES];
                                                               }
+                                                          }];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)showAlertForError:(NSString *)message {
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Grab Payment"
+                                                                   message:message
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {
                                                           }];
     
     [alert addAction:defaultAction];
