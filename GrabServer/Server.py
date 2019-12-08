@@ -61,7 +61,7 @@ class Server:
         values_str = '"{}", {}, {}, {}, {}, {}'.format(transaction_id, txn_date, money,
                                                      seller['seller_id'], user['user_id'], state)
         otp = ':06d'.format(random.randint(0, 999999))
-        otp = '111111'  # DELETE
+        # otp = '111111'  # DELETE
         with sqlite3.connect(SERVER_DB) as conn:
             cursorObj = conn.cursor()
             cursorObj.execute('INSERT INTO transactions (transaction_id, txn_date, money, seller_id, user_id, \
@@ -74,6 +74,7 @@ class Server:
         message_to_user = '{} is requesting {} Rs. SMS {} to {} to confirm your request'.format(
                             seller['seller_name'], money, otp, Secret.GRAB_CONFIRM_NUMBER)
         SendSMS.service(message_to_user, user_phone)
+        print('SMS:::::::::::::::', message_to_user)
 
         return {'status': SUCCESS, 'message': 'ok'}
 
@@ -133,7 +134,7 @@ class Server:
                               'transaction_id == "{}"'.format(transaction['transaction_id']))
 
             otp = '{:06d}'.format(random.randint(1, 999999))
-            otp = '333333'     # DELETE
+            # otp = '333333'     # DELETE
             cursorObj.execute('INSERT INTO confirm_payment (seller_id, transaction_id, user_phone, otp) '
                               'VALUES ({}, "{}", {}, "{}")'.format(transaction['seller_id'],
                                                                    transaction['transaction_id'],
@@ -141,6 +142,7 @@ class Server:
             conn.commit()
 
         sms = 'You have successfully performed transaction. Say the number {} to the seller'.format(otp)
+        print('SMS::::::::::', sms)
         SendSMS.service(sms, user_phone)
 
         return {'status': SUCCESS, 'message': 'Ok'}
