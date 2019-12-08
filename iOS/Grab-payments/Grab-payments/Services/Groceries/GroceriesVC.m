@@ -25,7 +25,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.title = @"Groceries";
+    
     
     self.otp1.font = [UIFont fontWithName:@"Helvetica Neue" size:25.0];
     self.otp2.font = [UIFont fontWithName:@"Helvetica Neue" size:25.0];
@@ -44,10 +44,13 @@
     self.submitButton.layer.cornerRadius = 5.0;
     [self.submitButton setTitle:@"Submit" forState:UIControlStateNormal];
     
+    
     if (self.type == ConfirmMerchant) {
         self.titleLabel.text = @"Confirm merchant OTP";
+        self.title = @"Merchant";
     } else {
         self.titleLabel.text = @"Confirm transaction OTP";
+        self.title = @"Bank";
     }
     
     // Do any additional setup after loading the view from its nib.
@@ -108,7 +111,14 @@
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
                                                           handler:^(UIAlertAction * action) {
-                                                              [self.navigationController popToRootViewControllerAnimated:YES];
+                                                              
+                                                              if (self.type == ConfirmMerchant) {
+                                                                  GroceriesVC *groceriesVC = [[GroceriesVC alloc] initWithNibName:@"GroceriesVC" bundle:nil];
+                                                                  groceriesVC.type = ConfirmBankOtp;
+                                                                  [self.navigationController pushViewController:groceriesVC animated:YES];
+                                                              } else {
+                                                                  [self.navigationController popToRootViewControllerAnimated:YES];
+                                                              }
                                                           }];
     
     [alert addAction:defaultAction];
