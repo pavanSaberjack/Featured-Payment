@@ -19,6 +19,7 @@
                 <outlet property="otp5" destination="ws5-WH-QuT" id="cWc-Ru-NBp"/>
                 <outlet property="otp6" destination="x9F-Qj-Zxo" id="nTh-9V-6wc"/>
                 <outlet property="submitButton" destination="opp-ca-4Ic" id="aah-Ot-oe9"/>
+                <outlet property="titleLabel" destination="AFd-RX-mhN" id="iT2-bL-Zjf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

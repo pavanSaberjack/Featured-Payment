@@ -1,4 +1,6 @@
 const express = require('express');
+const qs = require('qs');
+const FormData = require('form-data');
 const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -6,8 +8,8 @@ const axios = require('axios');
 const targetBaseUrl = 'http://localhost:3000/';
 const router = express.Router();
 
-const API_OTP = "https://www.google.com";
-const API_CON = "https://www.google.com";
+const API_OTP = "http://172.20.10.5:8080/initiate_payment";
+const API_CON = "http://172.20.10.5:8080/merchant_confirm_transaction";
 
 // app.use(express.static(`${__dirname}/public`));
 app.use(express.static(`${__dirname}/public`), router);
@@ -25,8 +27,16 @@ router.get('/', (req, res, next) => {
 
 //Request for OTP Initation//
 router.get('/confirm', (req, res) => {
+  let mobile = req.query.mobile;
+  let amount = req.query.amount;
+  let seller_id = 1;
 
-  axios.get(API_OTP)
+  console.log(mobile);
+  axios({
+    method:'post',
+    url: API_OTP,
+    data: qs.stringify({ 'money': amount, 'seller_id': seller_id, 'user_phone': mobile })
+  })
   .then(response => {
     console.log(response.data.url);
     console.log(response.data.explanation);
@@ -41,7 +51,14 @@ router.get('/confirm', (req, res) => {
 
 router.post('/success', (req, res) => {
   
-  axios.get(API_CON)
+  let otp = req.query.otp;
+  let seller_id = 1;
+
+  axios({
+    method:'post',
+    url: API_CON,
+    data: qs.stringify({ 'otp': otp, 'seller_id': seller_id, 'user_phone': '9663269499' })
+  })
   .then(response => {
     console.log(response.data.url);
     console.log(response.data.explanation);
