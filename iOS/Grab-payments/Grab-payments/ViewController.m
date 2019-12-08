@@ -41,6 +41,7 @@
 
 - (IBAction)goForGroceries:(id)sender {
     GroceriesVC *groceriesVC = [[GroceriesVC alloc] initWithNibName:@"GroceriesVC" bundle:nil];
+    groceriesVC.type = ConfirmMerchant;
     [self.navigationController pushViewController:groceriesVC animated:YES];
 }
 

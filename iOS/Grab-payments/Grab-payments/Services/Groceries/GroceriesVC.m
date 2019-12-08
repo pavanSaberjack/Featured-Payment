@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *otp5;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UITextField *otp6;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -43,6 +44,12 @@
     self.submitButton.layer.cornerRadius = 5.0;
     [self.submitButton setTitle:@"Submit" forState:UIControlStateNormal];
     
+    if (self.type == ConfirmMerchant) {
+        self.titleLabel.text = @"Confirm merchant OTP";
+    } else {
+        self.titleLabel.text = @"Confirm transaction OTP";
+    }
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -51,6 +58,11 @@
 }
 
 - (void)callAPI {
+    
+    NSString *urlStr = @"http://172.20.10.5:8080/confirm_bank_otp";
+    if (self.type == ConfirmMerchant) {
+        urlStr = @"http://172.20.10.5:8080/confirm_seller";
+    }
     
     NSString *strOTP = [NSString stringWithFormat:@"%@%@%@%@%@%@",
                         self.otp1.text,
@@ -61,10 +73,10 @@
                         self.otp6.text];
     
     NSDictionary *params = @{ @"otp": strOTP,
-                              @"user_phone": @(1234)
+                              @"user_phone": @"9663269499"
                               };
     
-    NSURL *url = [NSURL URLWithString:@"/confirm_seller"];
+    NSURL *url = [NSURL URLWithString:urlStr];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
     req.HTTPMethod = @"POST";
     
@@ -82,8 +94,16 @@
 }
 
 - (void)showAlert {
+    
+    NSString *messageText = @"";
+    if (self.type == ConfirmMerchant) {
+        messageText = @"Merchant confirmed";
+    } else {
+        messageText = @"Transaction confirmed";
+    }
+    
     UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Grab Payment"
-                                                                   message:@"OTP is verified"
+                                                                   message:messageText
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
