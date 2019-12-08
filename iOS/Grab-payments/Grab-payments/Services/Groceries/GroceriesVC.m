@@ -75,9 +75,7 @@
                         self.otp5.text,
                         self.otp6.text];
     
-    NSDictionary *params = @{ @"otp": strOTP,
-                              @"user_phone": @"9663269499"
-                              };
+    NSDictionary *params = @{@"otp":strOTP, @"user_phone":@"9663269499"};
     
     NSURL *url = [NSURL URLWithString:urlStr];
     NSMutableURLRequest *req = [NSMutableURLRequest requestWithURL:url];
@@ -88,6 +86,11 @@
     req.HTTPBody = jsonData;
     
     [[[NSURLSession sharedSession] dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        
+        NSLog(@"%@", error);
+        
+        NSHTTPURLResponse *httpResponse = (NSHTTPURLResponse *) response;
+//        NSLog(@"%@", httpResponse.statusCode);
         
         if (error) {
             dispatch_async(dispatch_get_main_queue(), ^{

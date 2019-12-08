@@ -51,8 +51,10 @@ router.get('/confirm', (req, res) => {
 
 router.post('/success', (req, res) => {
   
-  let otp = req.query.otp;
+  let otp = '210290';
   let seller_id = 1;
+
+  console.log(otp);
 
   axios({
     method:'post',
